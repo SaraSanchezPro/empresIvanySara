@@ -6,6 +6,9 @@ import { EmpleadosComponent } from './pages/empleados/empleados.component';
 import { ModificarEmpleadosComponent } from './pages/modificar-empleados/modificar-empleados.component';
 import { EliminarEmpleadosComponent } from './pages/eliminar-empleados/eliminar-empleados.component';
 import { NuevoEmpleadoComponent } from './pages/nuevo-empleado/nuevo-empleado.component';
+import { FormularioModificarEmpleadoComponent } from './components/formulario-modificar-empleado/formulario-modificar-empleado.component';
+import { FormularioAnadirEmpleadoComponent } from './components/formulario-anadir-empleado/formulario-anadir-empleado.component';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { NuevoEmpleadoComponent } from './pages/nuevo-empleado/nuevo-empleado.co
     EmpleadosComponent,
     ModificarEmpleadosComponent,
     EliminarEmpleadosComponent,
-    NuevoEmpleadoComponent
+    NuevoEmpleadoComponent,
+    FormularioModificarEmpleadoComponent,
+    FormularioAnadirEmpleadoComponent,
+
   ],
   imports: [
     BrowserModule

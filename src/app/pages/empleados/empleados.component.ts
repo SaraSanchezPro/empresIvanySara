@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./empleados.component.css']
 })
 export class EmpleadosComponent {
+  empleados: string[] = [];
+
+  mostrarEmpleados(){
+    this.empleados = ['Antonia Pérez', 'Carlos Andrés De Todos Los Santos', 'Julián Sueños']
+  }
 
 }

@@ -1,12 +1,10 @@
 <div class="empleadosContainer">
     <div class="listaEmpleados">
-        <button type="button">Mostrar empleados</button>
+        <button type="button" (click)="mostrarEmpleados()">Mostrar empleados</button>
         <input type="text" placeholder="Buscar empleados">
         <div class="empleados">
             <ul>
-                <li>Antonia Pérez</li>
-                <li>Carlos Andrés De Todos Los Santos</li>
-                <li>Julián Sueños</li>
+                <li *ngFor="let empleado of empleados">{{empleado}}</li>
             </ul>
         </div>
     </div>

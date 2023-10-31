@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class EliminarEmpleadosComponent {
 
+  empleados: string[] = [];
+
+  mostrarEmpleados(){
+    this.empleados = ['Antonia Pérez', 'Carlos Andrés De Todos Los Santos', 'Julián Sueños']
+  }
+
+  eliminarEmpleado(index: number) {
+    this.empleados.splice(index, 1);
+  }
+
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario-modificar-empleado.component.css']
 })
 export class FormularioModificarEmpleadoComponent {
-
+  
 }

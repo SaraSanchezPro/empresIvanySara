@@ -7,6 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ModificarEmpleadosComponent } from './pages/modificar-empleados/modificar-empleados.component';
 import { NuevoEmpleadoComponent } from './pages/nuevo-empleado/nuevo-empleado.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes : Routes = [
   {path:"", component: EmpleadosComponent},
@@ -22,7 +24,9 @@ const routes : Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot (routes)
+    RouterModule.forRoot (routes),
+    FormsModule,
+    BrowserModule
   ],
   exports: [RouterModule]
 })

@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,12 +27,14 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
+ 
 
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

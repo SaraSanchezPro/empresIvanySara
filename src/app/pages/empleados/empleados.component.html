@@ -2,13 +2,17 @@
     <div class="listaEmpleados">
         <button type="button" (click)="mostrarEmpleados()">Mostrar empleados</button>
         <input type="text" placeholder="Buscar empleados">
-        <!-- <button type="button" (click)="mostrarEmpleado(name, lastName)">Mostrar empleado</button> -->
+        <button type="button" (click)="mostrarEmpleado(idtrabajadores)">Mostrar empleado</button>
 
 
         <div class="empleados">
             <ul>
                 <li *ngFor="let empleado of empleados">{{empleado.name}} {{empleado.lastName}}</li>
             </ul>
+            <ul *ngIf="empleado">
+                <li>{{empleado.name}} {{empleado.lastName}}</li>
+              </ul>
+              <p *ngIf="!empleado">No se ha encontrado al trabajador</p>
         </div>
     </div>
 </div>

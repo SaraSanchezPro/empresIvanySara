@@ -9,7 +9,10 @@ import { EmpleadosJuradoService } from 'src/app/services/empleados-jurado.servic
 })
 export class EmpleadosComponent {
   public empleados: Empleado[] = []; //defino la variable que va a tener un tipo que voy a inicializar
-  
+  public idtrabajadores: number = 0;
+  public empleado : Empleado | null = null;
+
+
   constructor(private empleadoService: EmpleadosJuradoService) { }
   mostrarEmpleados() {
     // this.empleados = ['Antonia Pérez', 'Carlos Andrés De Todos Los Santos', 'Julián Sueños']
@@ -21,13 +24,10 @@ export class EmpleadosComponent {
     );
   }
 
-  mostrarEmpleado(name:string, lastName:string){
-    this.empleadoService.getEmpleado(name, lastName).subscribe((data)=> { 
+  mostrarEmpleado(idtrabajadores:number){
+    this.empleadoService.getEmpleado(idtrabajadores).subscribe((data)=> { 
       console.log(data);
-      this.empleados = data;
+      this.empleado = data;
     });
   }
-
-
-
 }

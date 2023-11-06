@@ -8,7 +8,7 @@ import { Empleado } from '../models/empleado.model';
 })
 export class EmpleadosJuradoService {
   private apiUrl = 'http://localhost:3000/empleados';
-
+  
   constructor(private http: HttpClient) {
 
   }
@@ -16,10 +16,13 @@ export class EmpleadosJuradoService {
     return this.http.get<Empleado[]>(this.apiUrl)
   }
 
-  getEmpleado(name:string, lastName:string){
-    return this.http.get<Empleado[]>(`${this.apiUrl}name=${name}&lastName=${lastName}`)
+  getEmpleado(idtrabajadores: number){
+    return this.http.get<Empleado>(`${this.apiUrl}/${idtrabajadores}`)//no FUNCIONA
   }
 
+  anadirEmpleado(nuevoEmpleado: Empleado) {
+    return this.http.post(`${this.apiUrl}`, nuevoEmpleado); //ENVÍA A NULL NAME; LASTNAME Y AGE
+  }
   //Cómo se haría con un observable???
 
 }

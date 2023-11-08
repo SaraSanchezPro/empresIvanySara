@@ -1,10 +1,10 @@
 <div class="backgroundForm">
     <form>
         <h1>Modificar empleado</h1>
-        <input type="text" placeholder="Buscar empleado">
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
-        <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tu apellido">
-        <input type="number" id="edad" name="edad" placeholder="Escribe tu edad">
-        <button type="button" value="Enviar">Modificar</button>
+        <input type="text" [(ngModel)]="empleadoId" name="empleado" placeholder="ID del empleado">
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="name" placeholder="Escribe tu nombre">
+        <input type="text" id="apellidos" name="apellidos" [(ngModel)]="lastName" placeholder="Escribe tu apellido">
+        <input type="number" id="edad" name="edad" [(ngModel)]="age" placeholder="Escribe tu edad">
+        <button type="button" (click)="modificarEmpleado()">Modificar</button>
       </form>
   </div>

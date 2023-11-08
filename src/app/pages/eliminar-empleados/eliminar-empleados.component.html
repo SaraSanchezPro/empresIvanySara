@@ -1,12 +1,12 @@
 <div class="empleadosContainer">
     <div class="listaEmpleados">
         <button type="button" (click)="mostrarEmpleados()">Mostrar empleados</button>
-        <input type="text" placeholder="Buscar empleados">
         <div class="empleados">
             <ul>
-                <li *ngFor="let empleado of empleados; let i = index">
-                    {{ empleado }} <span class="eliminarEmpleado" (click)="eliminarEmpleado(i)">✖</span>
-                </li>            </ul>
+                <li *ngFor="let empleado of empleados">{{empleado.name}} {{empleado.lastName}}
+                    <span class="eliminarEmpleado" (click)="eliminarEmpleado()">✖</span>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

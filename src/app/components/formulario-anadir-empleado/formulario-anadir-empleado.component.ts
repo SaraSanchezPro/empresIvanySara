@@ -8,15 +8,19 @@ import { EmpleadosJuradoService } from 'src/app/services/empleados-jurado.servic
   styleUrls: ['./formulario-anadir-empleado.component.css']
 })
 export class FormularioAnadirEmpleadoComponent {
-  public nuevoEmpleado: Empleado = new Empleado(0, '', '', 0);
+  public name : string = "";
+  public lastName: string = "";
+  public age: number = 0;
 
   constructor(private empleadoService: EmpleadosJuradoService){}
+
   anadirEmpleado() {
-    this.empleadoService.anadirEmpleado(this.nuevoEmpleado).subscribe(
+    let empleado = new Empleado (this.name, this.lastName, this.age)
+    console.log(empleado);
+    this.empleadoService.anadirEmpleado(empleado).subscribe(
       (data) => {
         console.log('Empleado añadido:', data);
-        alert('Empleado añadido correctamente.');
-        this.nuevoEmpleado = new Empleado(0, '', '', 0);
+        alert('Empleado añadido correctamente.');    
       }
     );
 }

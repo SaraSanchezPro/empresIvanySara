@@ -17,12 +17,19 @@ export class EmpleadosJuradoService {
   }
 
   getEmpleado(idtrabajadores: number){
-    return this.http.get<Empleado>(`${this.apiUrl}/${idtrabajadores}`)//no FUNCIONA
+    return this.http.get<Empleado>(`${this.apiUrl}/${idtrabajadores}`)
   }
 
   anadirEmpleado(nuevoEmpleado: Empleado) {
-    return this.http.post(`${this.apiUrl}`, nuevoEmpleado); //ENVÍA A NULL NAME; LASTNAME Y AGE
+    return this.http.post(`${this.apiUrl}`, nuevoEmpleado);
   }
-  //Cómo se haría con un observable???
+  
+  modificarEmpleado(empleado: Empleado) {
+    return this.http.put(`${this.apiUrl}`, empleado);
+  }
+
+  eliminarEmpleado(idtrabajadores: number){
+    return this.http.delete<Empleado>(`${this.apiUrl}/${idtrabajadores}`);
+  }
 
 }

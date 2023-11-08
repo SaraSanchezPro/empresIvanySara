@@ -1,9 +1,9 @@
 <div class="backgroundForm">
     <form>
         <h1>Añadir empleado</h1>
-        <input type="text" id="nombre" name="name" placeholder="Escribe tu nombre">
-        <input type="text" id="apellidos" name="lastName" placeholder="Escribe tu apellido">
-        <input type="text" id="edad" name="age" placeholder="Escribe tu edad">
+        <input type="text" id="nombre" [(ngModel)]="name" name="name" placeholder="Escribe tu nombre">
+        <input type="text" id="apellidos" [(ngModel)]="lastName" name="lastName" placeholder="Escribe tu apellido">
+        <input type="text" id="edad" name="age" [(ngModel)]="age" placeholder="Escribe tu edad">
         <button type="button" (click)="anadirEmpleado()">Añadir</button>
       </form>
   </div>

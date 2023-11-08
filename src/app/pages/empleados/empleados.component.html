@@ -1,8 +1,8 @@
 <div class="empleadosContainer">
     <div class="listaEmpleados">
         <button type="button" (click)="mostrarEmpleados()">Mostrar empleados</button>
-        <input type="text" placeholder="Buscar empleados">
-        <button type="button" (click)="mostrarEmpleado(idtrabajadores)">Mostrar empleado</button>
+        <input type="text" placeholder="Buscar empleados" [(ngModel)]="idEmpleado">
+        <button type="button" (click)="mostrarEmpleado()">Mostrar empleado</button>
 
 
         <div class="empleados">
